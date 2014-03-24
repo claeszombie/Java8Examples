@@ -3,14 +3,11 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.JUnit4;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertArrayEquals;
 
 /**
  * Created by claesdc on 2014-03-20.
@@ -19,7 +16,7 @@ import static org.junit.Assert.*;
 @RunWith(JUnit4.class)
 public class CollectionsTest {
 
-        private List names = Arrays.asList("peter","anna","mike","xenia");
+        private List<String> names = Arrays.asList("peter", "anna", "mike", "xenia");
         private String[] originalorder = {"peter","anna","mike","xenia"};
         private String[] ztoaorder = {"xenia","peter","mike","anna"};
         private String[] atozorder = {"anna","mike","peter","xenia"};

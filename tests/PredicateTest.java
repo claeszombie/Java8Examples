@@ -1,4 +1,3 @@
-import junit.framework.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -6,7 +5,7 @@ import org.junit.runners.JUnit4;
 
 import java.util.function.Predicate;
 
-import static junit.framework.Assert.*;
+import static junit.framework.Assert.assertEquals;
 
 /**
  * Created by claesdc on 2014-03-24.

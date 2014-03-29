@@ -6,7 +6,7 @@ import org.junit.runners.JUnit4;
 import java.util.function.Function;
 
 /**
- * Created by claesdc on 2014-03-29.
+ *
  */
 @RunWith(JUnit4.class)
 public class MethodConstructorReferenceTest {
@@ -31,7 +31,7 @@ public class MethodConstructorReferenceTest {
         Function<String,Integer> reference =  Integer::valueOf;
         Integer converted = reference.apply("123");
         Assert.assertNotNull(converted);
-        Assert.assertSame(123,converted);
+        Assert.assertSame(123, converted);
 
     }
     @Test

@@ -10,9 +10,8 @@ import java.util.List;
 import static org.junit.Assert.assertArrayEquals;
 
 /**
- * Created by claesdc on 2014-03-20.
+ *
  */
-
 @RunWith(JUnit4.class)
 public class CollectionsTest {
 

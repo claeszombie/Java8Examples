@@ -12,7 +12,7 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
 /**
- * Created by claesdc on 2014-03-24.
+ *
  */
 @RunWith(JUnit4.class)
 public class StreamTest {
@@ -30,7 +30,7 @@ public class StreamTest {
     @Test
     public void shouldMapLargestNrToListofStrings(){
         List<String> nrstream = nrlist.stream().filter(nr -> nr > 3).map(nr -> String.valueOf(nr)).collect(Collectors.toCollection(ArrayList::new));
-        assertTrue(nrstream instanceof List);
+        assertTrue(nrstream != null);
         assertEquals(5, nrlist.size());
         assertEquals(1, nrlist.get(0).intValue());
     }

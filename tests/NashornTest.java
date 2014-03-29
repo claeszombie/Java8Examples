@@ -15,7 +15,7 @@ import static org.hamcrest.CoreMatchers.*;
 
 
 /**
- * Created by claesdc on 2014-03-27.
+ *
  */
 @RunWith(JUnit4.class)
 public class NashornTest {

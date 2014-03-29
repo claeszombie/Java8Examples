@@ -8,7 +8,7 @@ import java.util.function.Predicate;
 import static junit.framework.Assert.assertEquals;
 
 /**
- * Created by claesdc on 2014-03-24.
+ *
  */
 @RunWith(JUnit4.class)
 public class PredicateTest {

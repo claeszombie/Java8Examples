@@ -6,7 +6,7 @@ import org.junit.runners.JUnit4;
 import static org.junit.Assert.assertEquals;
 
 /**
- * Created by claesdc on 2014-03-22.
+ *
  */
 @RunWith(JUnit4.class)
 public class InterfaceTest {

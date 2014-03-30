@@ -21,12 +21,11 @@ import static org.hamcrest.CoreMatchers.*;
 public class NashornTest {
     private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
     private ScriptEngine nashorn;
-    private ScriptEngineManager manager = new ScriptEngineManager();
+    private final ScriptEngineManager manager = new ScriptEngineManager();
 
     @Before
     public void setUp() {
-       // System.setOut(new PrintStream(outContent));
-//        nashorn = manager.getEngineByName("nashorn");
+        nashorn = manager.getEngineByName("nashorn");
     }
 
     @Test
@@ -52,15 +51,12 @@ public class NashornTest {
 
     @Test
     public void shouldEvaluateJSFile() {
-        nashorn = manager.getEngineByName("nashorn");
         Object evalobj = null;
 
         try {
             evalobj = nashorn.eval(new FileReader("js/NashornTest.js"));
             System.out.println(evalobj);
-        } catch (ScriptException e) {
-            e.printStackTrace();
-        } catch (FileNotFoundException e) {
+        } catch (ScriptException | FileNotFoundException e) {
             e.printStackTrace();
         }
 
@@ -71,7 +67,6 @@ public class NashornTest {
 
     @Test
     public void shouldLoadJavaInterfaceImplementationFromNashornScript() throws Exception {
-        nashorn = manager.getEngineByName("nashorn");
         try {
             HelloWorld helloWorld = (HelloWorld)nashorn.eval(new FileReader("src/nashorn/helloWorld.js"));
             String hello = helloWorld.sayHello("Nashorn");

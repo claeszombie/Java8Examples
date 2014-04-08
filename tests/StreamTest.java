@@ -5,10 +5,12 @@ import org.junit.runners.JUnit4;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Objects;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
 
 /**
@@ -18,6 +20,7 @@ import static org.junit.Assert.assertTrue;
 public class StreamTest {
 
     private List<Integer> nrlist = Arrays.asList(1, 2, 3, 4, 5);
+    private List<Integer> nrnulllist = Arrays.asList(1, null, 3, null, 5);
 
     //Filter
     @Test
@@ -34,6 +37,16 @@ public class StreamTest {
         assertEquals(5, nrlist.size());
         assertEquals(1, nrlist.get(0).intValue());
     }
+
+    @Test
+    public void shouldFilterNonNull(){
+//        List<String> nrstream = nrnulllist.stream().filter(Objects::nonNull).map(v -> new String()).collect(Collectors.toCollection(ArrayList::new));
+        List<Integer> nrstream = nrnulllist.stream().filter(Objects::nonNull).collect(Collectors.toList());
+        assertNotNull(nrstream);
+        assertEquals(3, nrstream.size());
+
+    }
+
     //Sorted
     //TODO
 
